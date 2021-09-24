@@ -14,3 +14,31 @@
 <p align="center"><img src="Image/performance.png" width="640"\></p>
 
 
+## 2. Bag Of Freebies
+
+추론속도는 유지하지만 학습 전략을 바꾸거나 학습 비용을 증가시켜 정확도를 높이는 방법이다.
+
++ Data Augmentation
+  + Photometric Distortions : brightness, contrast, hue, saturation, noise
+  + Geometric Distortions : random scaling, cropping, flipping, rotating
+  + CutOut
+  + Random Erase
+  + MixUp
+  + CutMix
+  + GAN
++ Semantic Distribution Bias
++ Bounding Box Regression
+  + GIOU(Generalized Intersection over Union)
+  + CIOU(Complete Intersection over Union)
+  + DIOU(Distance Intersection over Union)
+
+## 3. Bag Of Specials
+
+약간의 추론 속도 증가를 통해 정확도를 높이는 방법이다.
+
++ SPP
++ ASPP(Atrous Spatial Pyramid Pooling)
++ RFB(Receptive Field Block Net)
++ SE(Squeeze-and-Excitation)
++ SAM(Spatial Attention module)
++ LReLU, PReLU, SeLU, Mish  
