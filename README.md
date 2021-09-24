@@ -42,3 +42,13 @@
 + SE(Squeeze-and-Excitation)
 + SAM(Spatial Attention module)
 + LReLU, PReLU, SeLU, Mish  
+
+## 4. Architecture
+
+YOLO v4의 아키텍쳐는 다음과 같다.
+
+   1) Backbone : CSP-Darkent53
+   2) Neck : SPP(Spatial Pyramid Pooling), PAN(Path Aggregation Network)
+   3) Head : YOLO-v3 
+
+
