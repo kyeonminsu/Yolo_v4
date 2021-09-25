@@ -64,6 +64,12 @@ CSPNet은 굉장히 heavy한 inference cost를 완화시키며 정확도 손실�
 
 ## 6. SPP(Spatial Pyramid Pooling)
 
+<p align="center"><img src="Image/SPP.png" width="640"\></p>
+<p align="center"><img src="Image/SPP2.png" width="640"\></p>
 
+먼저 Conv Layer들을 거쳐거 추출된 피쳐맵을 인풋으로 받는다. 그리고 이를 미리 정해져 있는 영역으로 나누어 줍니다. 위의 예시에서는 미리 4x4, 2x2, 1x1 세 가지 영역을 제공하며, 각각을 하나의 피라미드라고 부른다. 즉, 해당 예시에서는 3개의 피라미드를 설정한 것입니다. 피라미드의 한 칸을 bin 이라고 합니다. 예를 들어 입력이 64 x 64 x 256 크기의 피쳐 맵이 들어온다고 했을 때, 4x4의 피라미드의 bin의 크기는 16x16이 된다.
 
+이제 각 bin에서 가장 큰 값만 추출하는 max pooling을 수행하고, 그 결과를 쭉 이어붙여 준다. 입력 피쳐맵의 체널 크기를 k, bin의 개수를 M이라고 했을 때 SPP의 최종 아웃풋은 kM 차원의 벡터이다. 위의 예시에서 k = 256, M = (16 + 4 + 1) = 21 이 됩니다. 정리해보면 입력 이미지의 크기와는 상관없이 미리 설정한 bin의 개수와 CNN 체널 값으로 SPP의 출력이 결정되므로, 항상 동일한 크기의 결과를 리턴한다고 볼 수 있다. 
+
+## 6. SPP(Spatial Pyramid Pooling)
 
