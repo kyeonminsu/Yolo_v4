@@ -14,6 +14,7 @@
 <p align="center"><img src="Image/performance.png" width="640"\></p>
 
 
+
 ## 2. Bag Of Freebies
 
 추론속도는 유지하지만 학습 전략을 바꾸거나 학습 비용을 증가시켜 정확도를 높이는 방법이다.
@@ -47,6 +48,8 @@
 
 YOLO v4의 아키텍쳐는 다음과 같다.
 
+<p align="center"><img src="Image/a.png" width="640"\></p>
+
    1) Backbone : CSP-Darkent53
    2) Neck : SPP(Spatial Pyramid Pooling), PAN(Path Aggregation Network)
    3) Head : YOLO-v3 
@@ -71,5 +74,6 @@ CSPNet은 굉장히 heavy한 inference cost를 완화시키며 정확도 손실�
 
 이제 각 bin에서 가장 큰 값만 추출하는 max pooling을 수행하고, 그 결과를 쭉 이어붙여 준다. 입력 피쳐맵의 체널 크기를 k, bin의 개수를 M이라고 했을 때 SPP의 최종 아웃풋은 kM 차원의 벡터이다. 위의 예시에서 k = 256, M = (16 + 4 + 1) = 21 이 됩니다. 정리해보면 입력 이미지의 크기와는 상관없이 미리 설정한 bin의 개수와 CNN 체널 값으로 SPP의 출력이 결정되므로, 항상 동일한 크기의 결과를 리턴한다고 볼 수 있다. 
 
-## 6. SPP(Spatial Pyramid Pooling)
+## 7. PAN(Path Aggregation Network)
 
+<p align="center"><img src="Image/PANet.png" width="640"\></p>
