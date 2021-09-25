@@ -48,7 +48,7 @@
 
 YOLO v4의 아키텍쳐는 다음과 같다.
 
-<p align="center"><img src="Image/a.png" width="640"\></p>
+<p align="center"><img src="Image/a.JPG" width="640"\></p>
 
    1) Backbone : CSP-Darkent53
    2) Neck : SPP(Spatial Pyramid Pooling), PAN(Path Aggregation Network)
@@ -77,3 +77,7 @@ CSPNet은 굉장히 heavy한 inference cost를 완화시키며 정확도 손실�
 ## 7. PAN(Path Aggregation Network)
 
 <p align="center"><img src="Image/PANet.png" width="640"\></p>
+
+1. information path (low levels의 feautre가 topmost로 가는 경로) 를 단축하고, low-levels에 존재하는 정확한 localization 신호로 feature    pyramid를 강화하기 위하여, bottom-up path augmentation (Figure-1의 (b) 부분) 을 생성한다.
+2. each proposal과 모든 feature levels 사이에 있는 손상된 infromation path를 복구하기 위해, adaptive feature pooling (Figure-1의 (c)    부분) 을개발한다. Adaptive feature pooling은 임의로 할당된 결과를 피하면서, 각 proposal에 대한 모든 feature levels에서 나온 feature를    집계하는 간단한 구성요소 이다. 
+3. tiny fully-connected layers (Figure-1의 (e) 부분) 로 mask prediction을 증축한다. 이 fc layers는 Mask R-CNN이 원래 사용하던 fully      connected network에 대해 보완적 특성을 갖는다. 
