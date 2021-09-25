@@ -51,4 +51,19 @@ YOLO v4의 아키텍쳐는 다음과 같다.
    2) Neck : SPP(Spatial Pyramid Pooling), PAN(Path Aggregation Network)
    3) Head : YOLO-v3 
 
+   YOLOv4 = YOLOv3 + CSP-Darknet53 + SPP +PAN + BoF + BoS
+
+## 5. CSP-Darkent53
+
+<p align="center"><img src="Image/CSPNet.png" width="640"\></p>
+
+YOLOv4에서는 CSPNet 기반의 CSPDarkNet53을 제안하였으며, CSPResNext50, EfficientNet-B3에 비해 parameter수와 FLOPS는 많았지만 실제 Inference Time (Throughput)은 가장 좋은 결과를 보이고 있다.
+
+CSPNet은 굉장히 heavy한 inference cost를 완화시키며 정확도 손실을 최소로 할 수 있는 Cross Stage Partial Network 구조를 제안하였으며, 위의 그림과 같이 input feature map을 2개의 part로 나눈 뒤, 하나의 part는 연산에 참여시키지 않고 뒤에서 합쳐주는 방식을 기반으로 inference cost, memory cost 등을 줄일 수 있다. 또한, 학습 관점에서는 gradient flow를 나눠줘서 학습에 좋은 영향을 줘서 정확도 손실이 적다고 한다.
+
+
+## 6. SPP(Spatial Pyramid Pooling)
+
+
+
 
