@@ -84,4 +84,4 @@ CSPNet은 굉장히 heavy한 inference cost를 완화시키며 정확도 손실�
 
 ## 8. Result
 
-
+<p align="center"><img src="Image/result.png" width="640"\></p>
