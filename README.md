@@ -87,4 +87,4 @@ CSPNet은 굉장히 heavy한 inference cost를 완화시키며 정확도 손실�
 result-Image
 <p align="center"><img src="Image/result.png" width="640"\></p>
 result-Video
-<p align="center"><img src="Image/output.mp4" width="640"\></p>
+src=Image/output.mp4
